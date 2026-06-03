@@ -11,7 +11,7 @@ fi
 
 cd /workspace/app
 
-if pgrep -f "php artisan serve --host=0.0.0.0 --port=8000" > /dev/null 2>&1; then
+if pgrep -f -x "php artisan serve --host=0.0.0.0 --port=8000" > /dev/null 2>&1; then
     exit 0
 fi
 
