@@ -12,6 +12,8 @@ npm install -D husky lint-staged prettier
 npm pkg set lint-staged='{"*.php": ["pint"], "*.{js,jsx,ts,tsx,vue,css,scss,md}": ["prettier --write"]}'
 php artisan key:generate
 
+echo 'SESSION_DRIVER=file' >> .env
+
 echo ""
 echo "Laravel scaffolded. Next steps:"
 echo "  1. git init"

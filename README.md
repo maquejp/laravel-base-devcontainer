@@ -23,7 +23,10 @@ cd .. && git add -A && git commit -m "chore: initial scaffold"
 ```
 
 This sets up pre-commit hooks that run Pint (PHP) and Prettier (JS/CSS/MD) on
-staged files. The project is ready to go.
+staged files.
+
+The Laravel dev server auto-starts on port 8000 when the container runs.
+Open http://localhost:8000 in your browser.
 
 ### A note on AI usage
 
