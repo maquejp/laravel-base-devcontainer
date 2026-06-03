@@ -83,7 +83,7 @@ reaches production. Use AI to move faster, not to check out.
 - **Node.js** (via devcontainer features, needed for Vite)
 - **Xdebug** enabled
 - Bind mount: your host files sync to `/workspace`
-- Workspace opens at `/workspace/app`
+- Workspace opens at `/workspace` — the Laravel project lives in `app/`
 
 ### Services
 

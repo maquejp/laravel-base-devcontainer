@@ -2,7 +2,7 @@
 	"name": "Laravel Dev Container",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "laravel-app",
-	"workspaceFolder": "/workspace/app",
+	"workspaceFolder": "/workspace",
 	"forwardPorts": [
 		8000,
 		5432
