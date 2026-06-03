@@ -141,6 +141,17 @@ php artisan queue:work
 php artisan tinker
 ```
 
+## Community
+
+Contributions are welcome — whether it's a new skill, a fix to an existing one, or
+an improvement to the devcontainer setup.
+
+- **[Contributing](CONTRIBUTING.md)** — how to get started, commit conventions, and
+  PR guidelines
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** — everyone participating in this
+  project is expected to uphold a respectful and inclusive environment
+- **[License](LICENSE)** — this project is open source under the MIT license
+
 ## Requirements
 
 - Docker
