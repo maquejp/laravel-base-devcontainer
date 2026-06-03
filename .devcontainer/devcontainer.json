@@ -35,5 +35,5 @@
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"postCreateCommand": "bash .devcontainer/setup.sh",
-	"postStartCommand": ".devcontainer/start-server.sh"
+	"postStartCommand": "bash .devcontainer/start-server.sh"
 }
