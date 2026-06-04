@@ -26,7 +26,7 @@ This sets up pre-commit hooks that run Pint (PHP) and Prettier (JS/CSS/MD) on
 staged files.
 
 The Laravel dev server auto-starts on port 8000 when the container runs.
-Open http://localhost:8000 in your browser.
+Open <http://localhost:8000> in your browser.
 
 ### A note on AI usage
 
@@ -90,32 +90,32 @@ reaches production. Use AI to move faster, not to check out.
 
 ### Services
 
-| Service         | Port               | Credentials          |
-|-----------------|--------------------|----------------------|
-| `laravel-app`   | 8000 (Laravel)     | —                    |
-| `laravel-app-db`| 5432 (PostgreSQL)  | `laravel` / `laravel`|
+| Service          | Port              | Credentials           |
+| ---------------- | ----------------- | --------------------- |
+| `laravel-app`    | 8000 (Laravel)    | —                     |
+| `laravel-app-db` | 5432 (PostgreSQL) | `laravel` / `laravel` |
 
 ## AI Skills
 
 15 skills covering Laravel and PostgreSQL development. Any AI tool that supports skill files can consume them:
 
-| Skill             | What it covers                                         |
-|-------------------|--------------------------------------------------------|
-| **api**           | JSON responses, resources, pagination, status codes    |
-| **artisan**       | Make commands, scheduling, tinker                      |
-| **blade**         | Components, layouts, directives                        |
-| **caching**       | Query caching, invalidation, response caching          |
-| **commits**       | Conventional Commits format                            |
-| **eloquent**      | Relationships, scopes, accessors, casts                |
-| **error-handling**| Exception mapping, error JSON, logging                 |
-| **migrations**    | Schema builder, foreign keys, indexes, seeders         |
-| **performance**   | N+1 prevention, chunking, queueing                     |
-| **postgresql**    | psql, full-text search, JSON columns, extensions       |
-| **principles**    | SOLID, DRY, KISS with Laravel examples                 |
-| **routing**       | Routes, controllers, middleware, model binding         |
-| **security**      | Sanctum, policies, CORS, rate limiting                 |
-| **testing**       | Pest/PHPUnit, factories, HTTP assertions               |
-| **validation**    | Form requests, rules, custom validators                |
+| Skill              | What it covers                                      |
+| ------------------ | --------------------------------------------------- |
+| **api**            | JSON responses, resources, pagination, status codes |
+| **artisan**        | Make commands, scheduling, tinker                   |
+| **blade**          | Components, layouts, directives                     |
+| **caching**        | Query caching, invalidation, response caching       |
+| **commits**        | Conventional Commits format                         |
+| **eloquent**       | Relationships, scopes, accessors, casts             |
+| **error-handling** | Exception mapping, error JSON, logging              |
+| **migrations**     | Schema builder, foreign keys, indexes, seeders      |
+| **performance**    | N+1 prevention, chunking, queueing                  |
+| **postgresql**     | psql, full-text search, JSON columns, extensions    |
+| **principles**     | SOLID, DRY, KISS with Laravel examples              |
+| **routing**        | Routes, controllers, middleware, model binding      |
+| **security**       | Sanctum, policies, CORS, rate limiting              |
+| **testing**        | Pest/PHPUnit, factories, HTTP assertions            |
+| **validation**     | Form requests, rules, custom validators             |
 
 ## AI Agents
 
