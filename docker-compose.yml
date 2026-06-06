@@ -5,6 +5,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8000"
+      - "5173:5173"
     volumes:
       - ./app:/app
     environment:

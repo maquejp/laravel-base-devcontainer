@@ -13,6 +13,31 @@ if [ ! -f vendor/autoload.php ]; then
     composer install --no-interaction --optimize-autoloader
 fi
 
+install_node_modules() {
+    echo "==> Running npm install..."
+    npm install --no-audit --no-fund --include=optional
+}
+
+rolldown_binding_present() {
+    node -e "require.resolve('@rolldown/binding-linux-x64-gnu')" >/dev/null 2>&1
+}
+
+if [ ! -d node_modules ]; then
+    install_node_modules
+fi
+
+if ! rolldown_binding_present; then
+    echo "==> Missing rolldown native binding. Reinstalling node_modules..."
+    rm -rf node_modules
+    install_node_modules
+fi
+
+if ! rolldown_binding_present; then
+    echo "==> Optional dependency still missing. Rebuilding lockfile and reinstalling..."
+    rm -rf node_modules package-lock.json
+    install_node_modules
+fi
+
 if [ ! -f .env ]; then
     cp .env.example .env
 fi
@@ -33,4 +58,22 @@ fi
 echo "==> Running migrations..."
 php artisan migrate --force
 
-exec php artisan serve --host=0.0.0.0 --port=8000
+echo "==> Starting Vite dev server..."
+node ./node_modules/vite/bin/vite.js --host 0.0.0.0 --port 5173 &
+VITE_PID=$!
+
+echo "==> Starting Laravel development server..."
+php artisan serve --host=0.0.0.0 --port=8000 &
+LARAVEL_PID=$!
+
+cleanup() {
+    kill "$VITE_PID" "$LARAVEL_PID" 2>/dev/null || true
+}
+
+trap cleanup INT TERM
+
+wait -n "$VITE_PID" "$LARAVEL_PID"
+EXIT_CODE=$?
+cleanup
+wait "$VITE_PID" "$LARAVEL_PID" 2>/dev/null || true
+exit "$EXIT_CODE"
