@@ -58,6 +58,9 @@ fi
 echo "==> Running migrations..."
 php artisan migrate --force
 
+echo "==> Seeding database..."
+php artisan db:seed --force
+
 echo "==> Starting Vite dev server..."
 node ./node_modules/vite/bin/vite.js --host 0.0.0.0 --port 5173 &
 VITE_PID=$!
